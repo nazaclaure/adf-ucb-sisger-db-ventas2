@@ -10,7 +10,8 @@
 		"schema": [
 			{
 				"name": "ID_PRODUCTO",
-				"type": "varchar"
+				"type": "int",
+				"precision": 10
 			},
 			{
 				"name": "PRODUCTO",
@@ -18,11 +19,14 @@
 			},
 			{
 				"name": "PRECIO",
-				"type": "varchar"
+				"type": "decimal",
+				"precision": 3,
+				"scale": 2
 			},
 			{
 				"name": "STOCK",
-				"type": "varchar"
+				"type": "int",
+				"precision": 10
 			}
 		],
 		"typeProperties": {

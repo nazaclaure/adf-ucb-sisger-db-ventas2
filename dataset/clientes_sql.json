@@ -10,11 +10,13 @@
 		"schema": [
 			{
 				"name": "ID_CLIENTE",
-				"type": "varchar"
+				"type": "int",
+				"precision": 10
 			},
 			{
 				"name": "CI_NIT",
-				"type": "varchar"
+				"type": "int",
+				"precision": 10
 			},
 			{
 				"name": "NOMBRE",
@@ -22,11 +24,11 @@
 			},
 			{
 				"name": "FECHA_NAC",
-				"type": "varchar"
+				"type": "date"
 			},
 			{
 				"name": "GENERO",
-				"type": "varchar"
+				"type": "char"
 			}
 		],
 		"typeProperties": {

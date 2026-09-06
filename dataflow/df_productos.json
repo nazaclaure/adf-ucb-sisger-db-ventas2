@@ -24,26 +24,30 @@
 			"transformations": [
 				{
 					"name": "sort1"
+				},
+				{
+					"name": "derivedColumn1"
 				}
 			],
 			"scriptLines": [
 				"source(output(",
-				"          id_producto as string,",
+				"          id_producto as integer,",
 				"          producto as string,",
 				"          precio as string,",
-				"          stock as string",
+				"          stock as integer",
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 sort(asc(precio, true)) ~> sort1",
+				"derivedColumn1 sort(asc(precio, true)) ~> sort1",
+				"source1 derive(precio = toDecimal(precio)) ~> derivedColumn1",
 				"sort1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
-				"          ID_PRODUCTO as string,",
+				"          ID_PRODUCTO as integer,",
 				"          PRODUCTO as string,",
-				"          PRECIO as string,",
-				"          STOCK as string",
+				"          PRECIO as decimal(3,2),",
+				"          STOCK as integer",
 				"     ),",
 				"     deletable:false,",
 				"     insertable:true,",
