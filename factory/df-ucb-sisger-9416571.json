@@ -1,0 +1,15 @@
+{
+	"name": "df-ucb-sisger-9416571",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "canadacentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8d30e581-1d30-4d85-b0dc-0bb54a62fffd",
+		"tenantId": "cc28633f-12b8-46cb-bc15-951dae239b4d"
+	}
+}
